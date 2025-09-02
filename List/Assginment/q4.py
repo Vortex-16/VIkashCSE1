@@ -1,0 +1,1 @@
+#Createw a lit of sting write a python program which create another list from the frist taking the fisrt taking the first charcter from each word
