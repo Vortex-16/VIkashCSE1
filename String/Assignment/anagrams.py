@@ -1,0 +1,1 @@
+st=input("Enter Stringt")
