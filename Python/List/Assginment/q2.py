@@ -6,7 +6,6 @@ for row in table1:
         print(item, end=" ")
     print()
 
-
 table2 = [[7, 8, 9], [4, 5, 6]]
 print("Values in table2 by row are:")
 for row in table2:
