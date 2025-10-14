@@ -1,4 +1,10 @@
 tup1 =('physics','chemistry',1997,2000);
 tup2 =(1,2,3,4,5);
 tup3= "a","b","c","d";
-print(tup1)
+print(tup3[1])
+
+tup=(50,);
+print(type(tup))
+print(tup)
+
+tupI=();
