@@ -1,8 +1,7 @@
 #Searching by Linear Or Binary Search
 #input by user dictionary and key to be searched
 dict = {'a': 100, 'b': 200, 'c': 300}
-key = 'd'
-#Choose the method
+key = 'b'
 #Linear Search
 def linearSearch(dict, key):
     for k in dict.keys():
