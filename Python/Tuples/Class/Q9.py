@@ -24,8 +24,9 @@ print(slice)
 slice=tuplex[::3]
 print(slice)
 
-slice=tuplex[9:2:-4]
+slice=tuplex[::-1]
 print(slice)
 
-slice=tuplex[::-1]
+
+slice=tuplex[9:2:-4]
 print(slice)
