@@ -6,3 +6,4 @@ for k,v in d.items():
     d1[v]=k
 print("The inverted dictionary is:",d1)
 
+# Output: The inverted dictionary is: {'a': 1, 'b': 2, 'c': 3}
