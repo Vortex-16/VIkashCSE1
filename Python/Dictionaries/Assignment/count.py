@@ -1,4 +1,4 @@
-#write a Py prog to count th e lements in a list until an element is tuple
+#write a Py prog to count the lements in a list until an element is tuple
 def count_until_tuple(lst):
     count = 0
     for item in lst:
