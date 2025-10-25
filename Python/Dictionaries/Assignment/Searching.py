@@ -27,7 +27,7 @@ method = input("Enter 'L' for Linear Search or 'B' for Binary Search: ").upper()
 if method == 'L':
     found = linearSearch(dict, key)
     if found:
-        print("The value associated with the key is:", dict[key])
+        # print("The value associated with the key is:", dict[key])
         print("The key is found:", found)
     else:
         print("The key is not found:", found)
@@ -42,3 +42,9 @@ elif method == 'B':
 else:
     print("Invalid method selected.")
     found = False
+
+
+    '''
+    Output:
+    
+    '''
