@@ -1,4 +1,5 @@
 #write a pyhton program to invert a dictionary, i.e. it makes key of of one dictionary value of another and vice versa.
+
 d={1:'a',2:'b',3:'c'}
 d1={}
 for k,v in d.items():
