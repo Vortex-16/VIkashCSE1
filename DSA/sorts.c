@@ -114,3 +114,39 @@ int main() {
     }
     return 0;
 }
+
+/* Output: 
+Enter number of elements: 6
+Enter elements:
+8 2 3 5 9 1
+
+Menu:
+1. Selection Sort
+2. Bubble Sort
+3. Insertion Sort
+4. Quick Sort
+5. Display Array
+6. Exit
+Enter your choice: 3
+Array sorted using Insertion Sort.
+
+Menu:
+1. Selection Sort
+2. Bubble Sort
+3. Insertion Sort
+4. Quick Sort
+5. Display Array
+6. Exit
+Enter your choice: 5
+1 2 3 5 8 9 
+
+Menu:
+1. Selection Sort
+2. Bubble Sort
+3. Insertion Sort
+4. Quick Sort
+5. Display Array
+6. Exit
+Enter your choice: 6
+
+*/
