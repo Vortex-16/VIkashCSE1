@@ -9,4 +9,5 @@ def count_until_tuple(lst):
 my_list = [1, 2, 3, (4, 5), 6, 7]
 result = count_until_tuple(my_list)
 print("Number of elements before the first tuple:", result)
+
 #Output: Number of elements before the first tuple: 3
