@@ -46,5 +46,11 @@ else:
 
     '''
     Output:
-    
+    @Vortex-16 ➜ /workspaces/VIkashCSE1 (main) $ python -u "/workspaces/VIkashCSE1/Python/Dictionaries/Assignment/Searching.py"
+    Enter 'L' for Linear Search or 'B' for Binary Search: L
+    The key is found: True
+    @Vortex-16 ➜ /workspaces/VIkashCSE1 (main) $ python -u "/workspaces/VIkashCSE1/Python/Dictionaries/Assignment/Searching.py"
+    Enter 'L' for Linear Search or 'B' for Binary Search: b
+    The value associated with the key is: 200
+    The key is found: True
     '''
