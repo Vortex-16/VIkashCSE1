@@ -1,4 +1,4 @@
-#write a pyhton program to invert a dictionary, i.e. it makes key of of one dictionary value of another and vice versa.
+#write a pyhton program to invert a dictionary, i.e. it makes key of one dictionary value of another and vice versa.
 
 d={1:'a',2:'b',3:'c'}
 d1={}
