@@ -82,3 +82,297 @@ int main() {
     }
     return 0;
 }
+
+
+// Output:
+// Enter your choice: 2
+// Queue Underflow! Nothing to dequeue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 2
+// Queue Underflow! Nothing to dequeue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 2
+// Queue Underflow! Nothing to dequeue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 2
+// Queue Underflow! Nothing to dequeue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 2
+// Queue Underflow! Nothing to dequeue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 2
+// Queue Underflow! Nothing to dequeue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 1
+// Enter value to enqueue: 
+// 1
+// 1 enqueued to queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 1
+// Enter value to enqueue: 1
+// 1 enqueued to queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 1
+// Enter value to enqueue: 
+// 1
+// 1 enqueued to queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 41
+// Invalid choice! Please try again.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 14
+// Invalid choice! Please try again.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 1
+// Enter value to enqueue: 4
+// 4 enqueued to queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 14
+// Invalid choice! Please try again.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 1
+// Enter value to enqueue: 4
+// 4 enqueued to queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 1
+// Enter value to enqueue: 4
+// 4 enqueued to queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 1
+// Enter value to enqueue: 5
+// 5 enqueued to queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 15
+// Invalid choice! Please try again.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 1
+// Enter value to enqueue: 4
+// 4 enqueued to queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 1
+// Enter value to enqueue: 1
+// 1 enqueued to queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 1
+// Enter value to enqueue: 1
+// 1 enqueued to queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 1
+// Enter value to enqueue: 1
+// 1 enqueued to queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 1
+// Enter value to enqueue: 1
+// 1 enqueued to queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 1
+// Enter value to enqueue: 4
+// 4 enqueued to queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 4
+// 1 1 1 4 4 4 5 4 1 1 1 1 4 
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 3
+// Front element is: 1
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 3
+// Front element is: 1
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 3
+// Front element is: 1
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 3
+// Front element is: 1
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 2
+// 1 dequeued from queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 2
+// 1 dequeued from queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 2
+// 1 dequeued from queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 2
+// 4 dequeued from queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 
+ 
+// 1
+// Enter value to enqueue: 4
+// 4 enqueued to queue.
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 4
+// 4 4 5 4 1 1 1 1 4 4 
+
+// 1. Push
+// 2. Pop
+// 3. Peek
+// 4. Display
+// 5. Exit
+// Enter your choice: 5
