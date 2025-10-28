@@ -1,145 +1,106 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-void bubbleSort(int arr[], int n) {
-    int i, j, temp;
-    for (i = 0; i < n-1; i++) {
-        int swapped = 0;
-        for (j = 0; j < n-i-1; j++) {
-            if (arr[j] > arr[j+1]) {
-                temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
-                swapped = 1;
-            }
-        }
-        if (swapped == 0)
-            break;
+// ----------- Linear Search -----------
+int linearSearch(int arr[], int n, int key) {
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == key)
+            return i;  // return index if found
     }
+    return -1; // not found
 }
-void selectionSort(int arr[], int n) {
-    int i, j, minIdx, temp;
-    for (i = 0; i < n-1; i++) {
-        minIdx = i;
-        for (j = i+1; j < n; j++) {
-            if (arr[j] < arr[minIdx]) {
-                minIdx = j;
-            }
-        }
-        temp = arr[minIdx];
-        arr[minIdx] = arr[i];
-        arr[i] = temp;
-    }
-}
-void insertionSort(int arr[], int n) {
-    int i, key, j;
-    for (i = 1; i < n; i++) {
-        key = arr[i];
-        j = i - 1;
-        while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j];
-            j = j - 1;
-        }
-        arr[j + 1] = key;
-    }
-}
-void merge(int arr[], int left, int mid, int right) {
-    int n1 = mid - left + 1;
-    int n2 = right - mid;
 
-    int leftArr[n1], rightArr[n2];
-    for (int i = 0; i < n1; i++)
-        leftArr[i] = arr[left + i];
-    for (int i = 0; i < n2; i++)
-        rightArr[i] = arr[mid + 1 + i];
-
-    int i = 0, j = 0, k = left;
-    while (i < n1 && j < n2) {
-        if (leftArr[i] <= rightArr[j]) {
-            arr[k] = leftArr[i];
-            i++;
-        } else {
-            arr[k] = rightArr[j];
-            j++;
-        }
-        k++;
+// ----------- Binary Search -----------
+int binarySearch(int arr[], int n, int key) {
+    int low = 0, high = n - 1;
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        if (arr[mid] == key)
+            return mid;
+        else if (arr[mid] < key)
+            low = mid + 1;
+        else
+            high = mid - 1;
     }
-
-    while (i < n1) {
-        arr[k] = leftArr[i];
-        i++;
-        k++;
-    }
-
-    while (j < n2) {
-        arr[k] = rightArr[j];
-        j++;
-        k++;
-    }
+    return -1; // not found
 }
-void mergeSort(int arr[], int left, int right) {
-    if (left < right) {
-        int mid = left + (right - left) / 2;
-        mergeSort(arr, left, mid);
-        mergeSort(arr, mid + 1, right);
-        merge(arr, left, mid, right);
-    }
-}
-void printArray(int arr[], int size) {
-    for (int i = 0; i < size; i++) {
+
+// ----------- Display Array -----------
+void display(int arr[], int n) {
+    for (int i = 0; i < n; i++)
         printf("%d ", arr[i]);
-    }
     printf("\n");
 }
 
+// ----------- Main Function -----------
 int main() {
-    int n, choice;
-    printf("Enter the number of elements: ");
+    int n, choice, key, result;
+    printf("Enter number of elements: ");
     scanf("%d", &n);
 
     int arr[n];
-    printf("Enter %d elements:\n", n);
-    for (int i = 0; i < n; i++) {
+    printf("Enter elements (for binary search, enter sorted elements):\n");
+    for (int i = 0; i < n; i++)
         scanf("%d", &arr[i]);
-    }
-    do {
-        printf("\n--- Menu ---\n");
-        printf("1. Bubble Sort\n");
-        printf("2. Selection Sort\n");
-        printf("3. Insertion Sort\n");
-        printf("4. Merge Sort\n");
-        printf("5. Exit\n");
+
+    while (1) {
+        printf("\nMenu:\n");
+        printf("1. Linear Search\n");
+        printf("2. Binary Search\n");
+        printf("3. Display Array\n");
+        printf("4. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
         switch (choice) {
             case 1:
-                bubbleSort(arr, n);
-                printf("Array sorted using Bubble Sort: \n");
-                printArray(arr, n);
+                printf("Enter element to search: ");
+                scanf("%d", &key);
+                result = linearSearch(arr, n, key);
+                if (result != -1)
+                    printf("Element found at position %d (index %d)\n", result + 1, result);
+                else
+                    printf("Element not found!\n");
                 break;
-            case 2:
-                selectionSort(arr, n);
-                printf("Array sorted using Selection Sort: \n");
-                printArray(arr, n);
-                break;
-            case 3:
-                insertionSort(arr, n);
-                printf("Array sorted using Insertion Sort: \n");
-                printArray(arr, n);
-                break;
-            case 4:
-                mergeSort(arr, 0, n - 1);
-                printf("Array sorted using Merge Sort: \n");
-                printArray(arr, n);
-                break;
-            case 5:
-                printf("Exiting program.\n");
-                break;
-            default:
-                printf("Invalid choice! Please try again.\n");
-        }
 
-    } while (choice != 5);
+            case 2:
+                printf("Enter element to search (array must be sorted): ");
+                scanf("%d", &key);
+                result = binarySearch(arr, n, key);
+                if (result != -1)
+                    printf("Element found at position %d (index %d)\n", result + 1, result);
+                else
+                    printf("Element not found!\n");
+                break;
+
+            case 3:
+                printf("Array elements:\n");
+                display(arr, n);
+                break;
+
+            case 4:
+                exit(0);
+
+            default:
+                printf("Invalid choice! Try again.\n");
+        }
+    }
 
     return 0;
 }
+
+/*
+Enter number of elements: 6
+Enter elements:
+2 5 7 9 11 15
+
+Menu:
+1. Linear Search
+2. Binary Search
+3. Display Array
+4. Exit
+Enter your choice: 2
+Enter element to search (array must be sorted): 9
+Element found at position 4 (index 3)
+
+*/
