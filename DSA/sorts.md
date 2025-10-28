@@ -150,3 +150,18 @@ Algorithm Merge(arr, l, m, r)
         k ← k + 1
     end while
 End Algorithm
+
+
+
+
+
+
+
+🔸 Comparison Summary
+
+| Sorting Algorithm  | Best Case  | Worst Case | Stable | Method Type      |
+| ------------------ | ---------- | ---------- | ------ | ---------------- |
+| **Bubble Sort**    | O(n)       | O(n²)      | ✅ Yes  | Exchanging       |
+| **Insertion Sort** | O(n)       | O(n²)      | ✅ Yes  | Insertion        |
+| **Selection Sort** | O(n²)      | O(n²)      | ❌ No   | Selection        |
+| **Merge Sort**     | O(n log n) | O(n log n) | ✅ Yes  | Divide & Conquer |
