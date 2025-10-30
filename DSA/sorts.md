@@ -1,9 +1,5 @@
 ---
 
-## ⚙️ **Sorting Algorithms (Step-by-Step Explanation)**
-
----
-
 ### **1️⃣ Bubble Sort**
 
 Algorithm:
