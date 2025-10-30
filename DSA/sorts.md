@@ -1,167 +1,148 @@
-🔹 1. Bubble Sort
-🧮 Algorithm: Bubble Sort
+## ⚙️ Sorting Algorithms
 
-Step 1: Start
-Step 2: Input number of elements n
-Step 3: Input array elements arr[0...n-1]
-Step 4: Repeat for i = 0 to n - 2
-  Repeat for j = 0 to n - i - 2
-   If arr[j] > arr[j + 1], then
-    Swap arr[j] and arr[j + 1]
-Step 5: End loops
-Step 6: Print sorted array
-Step 7: Stop
+### 1️⃣ Bubble Sort
 
-💻 Pseudo Code: Bubble Sort
-Algorithm BubbleSort(arr, n)
-    for i ← 0 to n - 2 do
-        for j ← 0 to n - i - 2 do
-            if arr[j] > arr[j + 1] then
-                swap(arr[j], arr[j + 1])
-            end if
-        end for
-    end for
-End Algorithm
+**Algorithm:**
+1. Repeat (n-1) passes.
+2. In each pass, compare adjacent elements.
+3. Swap them if they are in the wrong order.
+4. After each pass, the largest element moves to the end.
 
+**Pseudocode:**
+for i ← 0 to n-2
+for j ← 0 to n-i-2
+if arr[j] > arr[j+1]
+swap(arr[j], arr[j+1])
 
+cpp
+Copy code
 
-🔹 2. Insertion Sort
+**C Program:**
+```c
+#include <stdio.h>
 
-🧮 Algorithm: Insertion Sort
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++)
+        for (int j = 0; j < n - i - 1; j++)
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+}
+2️⃣ Insertion Sort
+Algorithm:
 
-Step 1: Start
-Step 2: Input number of elements n
-Step 3: Input array arr[0...n-1]
-Step 4: Repeat for i = 1 to n - 1
-  key = arr[i]
-  j = i - 1
-  While j >= 0 and arr[j] > key
-   arr[j + 1] = arr[j]
-   j = j - 1
-  arr[j + 1] = key
-Step 5: Print sorted array
-Step 6: Stop
+Start from the 2nd element.
 
-💻 Pseudo Code: Insertion Sort
-Algorithm InsertionSort(arr, n)
-    for i ← 1 to n - 1 do
-        key ← arr[i]
-        j ← i - 1
-        while j ≥ 0 and arr[j] > key do
-            arr[j + 1] ← arr[j]
-            j ← j - 1
-        end while
-        arr[j + 1] ← key
-    end for
-End Algorithm
+Compare it with elements before it.
 
+Shift larger elements one position ahead.
 
+Insert the element at the correct place.
 
+Pseudocode:
 
-🔹 3. Selection Sort
+vbnet
+Copy code
+for i ← 1 to n-1
+    key ← arr[i]
+    j ← i - 1
+    while j >= 0 and arr[j] > key
+        arr[j+1] ← arr[j]
+        j ← j - 1
+    arr[j+1] ← key
+C Program:
 
-🧮 Algorithm: Selection Sort
+c
+Copy code
+void insertionSort(int arr[], int n) {
+    for (int i = 1; i < n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+}
+3️⃣ Selection Sort
+Algorithm:
 
-Step 1: Start
-Step 2: Input number of elements n
-Step 3: Input array arr[0...n-1]
-Step 4: Repeat for i = 0 to n - 2
-  Set min = i
-  Repeat for j = i + 1 to n - 1
-   If arr[j] < arr[min], set min = j
-  Swap arr[min] and arr[i]
-Step 5: Print sorted array
-Step 6: Stop
+Find the minimum element in the unsorted part.
 
-💻 Pseudo Code: Selection Sort
+Swap it with the first element of the unsorted part.
 
-Algorithm SelectionSort(arr, n)
-    for i ← 0 to n - 2 do
-        min ← i
-        for j ← i + 1 to n - 1 do
-            if arr[j] < arr[min] then
-                min ← j
-            end if
-        end for
-        swap(arr[i], arr[min])
-    end for
-End Algorithm
+Repeat for all elements.
 
+Pseudocode:
 
+css
+Copy code
+for i ← 0 to n-2
+    min_index ← i
+    for j ← i+1 to n-1
+        if arr[j] < arr[min_index]
+            min_index ← j
+    swap(arr[min_index], arr[i])
+C Program:
 
-🔹 4. Merge Sort
+c
+Copy code
+void selectionSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int min_idx = i;
+        for (int j = i + 1; j < n; j++)
+            if (arr[j] < arr[min_idx])
+                min_idx = j;
+        int temp = arr[min_idx];
+        arr[min_idx] = arr[i];
+        arr[i] = temp;
+    }
+}
+4️⃣ Merge Sort
+Algorithm:
 
-🧮 Algorithm: Merge Sort
+Divide the array into two halves.
 
-Step 1: Start
-Step 2: If array has one element, return
-Step 3: Divide array into two halves:
-  Left half → arr[l...mid]
-  Right half → arr[mid+1...r]
-Step 4: Recursively call MergeSort on both halves
-Step 5: Merge both halves into a sorted array
-Step 6: Stop
+Recursively sort both halves.
 
+Merge the sorted halves into a single sorted array.
 
+Pseudocode:
 
-
-💻 Pseudo Code: Merge Sort
-
-Algorithm MergeSort(arr, l, r)
-    if l < r then
+scss
+Copy code
+mergeSort(arr, l, r):
+    if l < r:
         m ← (l + r) / 2
-        MergeSort(arr, l, m)
-        MergeSort(arr, m + 1, r)
-        Merge(arr, l, m, r)
-    end if
-End Algorithm
+        mergeSort(arr, l, m)
+        mergeSort(arr, m+1, r)
+        merge(arr, l, m, r)
+C Program:
 
-Algorithm Merge(arr, l, m, r)
-    n1 ← m - l + 1
-    n2 ← r - m
-    create arrays L[1..n1], R[1..n2]
+c
+Copy code
+void merge(int arr[], int l, int m, int r) {
+    int n1 = m - l + 1, n2 = r - m;
+    int L[n1], R[n2];
+    for (int i = 0; i < n1; i++) L[i] = arr[l + i];
+    for (int j = 0; j < n2; j++) R[j] = arr[m + 1 + j];
 
-    for i ← 0 to n1 - 1 do
-        L[i] ← arr[l + i]
-    for j ← 0 to n2 - 1 do
-        R[j] ← arr[m + 1 + j]
+    int i = 0, j = 0, k = l;
+    while (i < n1 && j < n2)
+        arr[k++] = (L[i] <= R[j]) ? L[i++] : R[j++];
 
-    i ← 0, j ← 0, k ← l
-    while i < n1 and j < n2 do
-        if L[i] ≤ R[j] then
-            arr[k] ← L[i]
-            i ← i + 1
-        else
-            arr[k] ← R[j]
-            j ← j + 1
-        end if
-        k ← k + 1
-    end while
+    while (i < n1) arr[k++] = L[i++];
+    while (j < n2) arr[k++] = R[j++];
+}
 
-    while i < n1 do
-        arr[k] ← L[i]
-        i ← i + 1
-        k ← k + 1
-    end while
-
-    while j < n2 do
-        arr[k] ← R[j]
-        j ← j + 1
-        k ← k + 1
-    end while
-End Algorithm
-
-
-
-
-
-
-
-🔸 Comparison Summary
-
-| Sorting Algorithm  | Best Case  | Worst Case | Stable | Method Type      |
-| ------------------ | ---------- | ---------- | ------ | ---------------- |
-| **Bubble Sort**    | O(n)       | O(n²)      | ✅ Yes  | Exchanging       |
-| **Insertion Sort** | O(n)       | O(n²)      | ✅ Yes  | Insertion        |
-| **Selection Sort** | O(n²)      | O(n²)      | ❌ No   | Selection        |
-| **Merge Sort**     | O(n log n) | O(n log n) | ✅ Yes  | Divide & Conquer |
+void mergeSort(int arr[], int l, int r) {
+    if (l < r) {
+        int m = (l + r) / 2;
+        mergeSort(arr, l, m);
+        mergeSort(arr, m + 1, r);
+        merge(arr, l, m, r);
+    }
+}
