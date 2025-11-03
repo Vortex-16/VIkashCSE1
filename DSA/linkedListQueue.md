@@ -1,5 +1,3 @@
----
-
 ## 🚀 **Algorithm: Queue Using Linked List**
 
 ### Step-wise Algorithm:
