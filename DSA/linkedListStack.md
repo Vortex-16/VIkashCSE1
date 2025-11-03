@@ -1,5 +1,3 @@
----
-
 # 🧱 Stack Using Linked List (C Program)
 
 A **stack** follows the **LIFO (Last In, First Out)** principle.
