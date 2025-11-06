@@ -1,17 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Doubly linked list node
 typedef struct Node {
 	int data;
 	struct Node *prev;
 	struct Node *next;
 } Node;
 
-// Head pointer
 Node *head = NULL;
 
-// Create a new node
 Node* create_node(int value) {
 	Node *newn = (Node*)malloc(sizeof(Node));
 	if (!newn) {
@@ -23,7 +20,6 @@ Node* create_node(int value) {
 	return newn;
 }
 
-// Insert at beginning
 void insert_first(int value) {
 	Node *n = create_node(value);
 	if (head == NULL) {
@@ -36,7 +32,6 @@ void insert_first(int value) {
 	printf("Inserted %d at the beginning.\n", value);
 }
 
-// Insert at end
 void insert_last(int value) {
 	Node *n = create_node(value);
 	if (head == NULL) {
@@ -50,7 +45,6 @@ void insert_last(int value) {
 	printf("Inserted %d at the end.\n", value);
 }
 
-// Delete first node
 void delete_first() {
 	if (head == NULL) {
 		printf("List is empty. Nothing to delete.\n");
@@ -68,7 +62,6 @@ void delete_first() {
 	printf("Deleted %d from the beginning.\n", val);
 }
 
-// Delete last node
 void delete_last() {
 	if (head == NULL) {
 		printf("List is empty. Nothing to delete.\n");
@@ -77,7 +70,7 @@ void delete_last() {
 	Node *cur = head;
 	while (cur->next) cur = cur->next;
 	int val = cur->data;
-	if (cur->prev == NULL) { // only one node
+	if (cur->prev == NULL) { 
 		head = NULL;
 	} else {
 		cur->prev->next = NULL;
@@ -86,7 +79,6 @@ void delete_last() {
 	printf("Deleted %d from the end.\n", val);
 }
 
-// Display list from head to tail
 void display() {
 	if (head == NULL) {
 		printf("List is empty.\n");
@@ -102,7 +94,6 @@ void display() {
 	printf("\n");
 }
 
-// Free entire list
 void free_list() {
 	Node *cur = head;
 	while (cur) {
@@ -113,7 +104,6 @@ void free_list() {
 	head = NULL;
 }
 
-// Menu-driven program
 int main() {
 	int choice, value;
 	while (1) {
@@ -126,13 +116,11 @@ int main() {
 		printf("6. Exit\n");
 		printf("Enter choice: ");
 		if (scanf("%d", &choice) != 1) {
-			// clear invalid input
 			int c;
 			while ((c = getchar()) != '\n' && c != EOF);
 			printf("Invalid input. Please enter a number.\n");
 			continue;
 		}
-
 		switch (choice) {
 			case 1:
 				printf("Enter value to insert at beginning: ");
@@ -163,4 +151,3 @@ int main() {
 	}
 	return 0;
 }
-
