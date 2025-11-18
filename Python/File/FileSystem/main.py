@@ -1,4 +1,4 @@
-f=open("Python/File/demofile.txt","r")
+f=open("Python/File/FileSystem/demofile.txt","r")
 print(f.read())
 f.seek(0)
 print(f.readline())

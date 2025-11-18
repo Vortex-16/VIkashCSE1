@@ -1,5 +1,0 @@
-f=open("Python/File/demofile.txt","a")
-f.write("\nNow the file has more content!")
-f.close()
-f=open("Python/File/demofile.txt","r")
-print(f.read())
