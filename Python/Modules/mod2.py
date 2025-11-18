@@ -1,5 +1,5 @@
 def star(n):
-    return '*' * n
+    return '* ' * n
 
 def num(n):
     return ' '.join(str(i) for i in range(1, n + 1))
