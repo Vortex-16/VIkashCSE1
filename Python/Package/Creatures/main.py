@@ -2,7 +2,7 @@ import creatures
 
 
 while(True):
-    choice=int(input("Enter 1 for Birds\nEnter 2 for Fish\nEnter 3 for Reptiles\nEnter 4 for Amphibians\nEnter 5 for Mammals\nYour choice: "))
+    choice=int(input("Enter 0 to Exit\nEnter 1 for Birds\nEnter 2 for Fish\nEnter 3 for Reptiles\nEnter 4 for Amphibians\nEnter 5 for Mammals\nYour choice: "))
     if choice==1:
         creatures.birds.example()
         creatures.birds.chars()
@@ -21,6 +21,11 @@ while(True):
     elif choice==5:
         creatures.mammals.example()
         creatures.mammals.chars()
+
+    elif choice==0:
+        print("Thank you for using the program.")
+        print("Exiting the program...")
+        break
         
     else:
         print("Invalid Choice! Please try again.")
