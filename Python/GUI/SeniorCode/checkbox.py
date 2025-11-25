@@ -8,7 +8,7 @@ Created on Wed Jun 26 12:39:44 2019
 from tkinter import *
 master = Tk()
 var1 = IntVar()
-Checkbutton(master, text="male", variable=var1).grid(row=0, sticky=W)
+Checkbutton(master, text="Coder", variable=var1).grid(row=0, sticky=W)
 var2 = IntVar()
-Checkbutton(master, text="female", variable=var2).grid(row=1, sticky=W)
+Checkbutton(master, text="Decoder", variable=var2).grid(row=1, sticky=W)
 mainloop()
