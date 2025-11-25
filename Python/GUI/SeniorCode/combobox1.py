@@ -9,7 +9,7 @@ import tkinter as tk
 from tkinter import ttk,messagebox
  
 app = tk.Tk() 
-app.geometry('600x600')
+app.geometry('250x125')
 
 labelTop = tk.Label(app,
                     text = "Choose your favourite month")
