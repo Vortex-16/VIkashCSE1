@@ -15,15 +15,15 @@ def select_choice():
     m1 = v1.get()
     m2 = v2.get()
     if m1 == 1 and m2 == 1 :
-        print(" Male Female")
+        print(" Coder Decoder")
     elif m1 == 1:
-        print("male")
+        print("Coder")
     elif m2 == 1:
-        print ("female")
+        print ("Decoder")
     else :
         print( "Selected None")
-master.geometry('200x300')
-arr=["male","female"]
+master.geometry('50x60')
+arr=["Coder","Decoder"]
 Checkbutton(master, text= arr[0], variable=v1,onvalue=1,offvalue=0,
             command = select_choice).grid(row=0, sticky=W)
 Checkbutton(master, text = arr[1], variable=v2, onvalue=1,offvalue = 0,
