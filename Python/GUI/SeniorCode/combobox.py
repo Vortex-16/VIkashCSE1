@@ -23,7 +23,7 @@ comboExample = ttk.Combobox(app,
                                     "April"])
 """ pprint(dict(comboExample)) """
 comboExample.grid(column=0, row=1)
-comboExample.current(1)
+comboExample.current(2)
 
 print(comboExample.current(), comboExample.get())
 
