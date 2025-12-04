@@ -6,14 +6,14 @@
 int hashTable[TABLE_SIZE];
 void initializeTable() {
     for (int i = 0; i < TABLE_SIZE; i++) {
-        hashTable[i] = -1; // -1 indicates empty slot
+        hashTable[i] = -1; 
     }
 }  
 int simpleAdditiveHash(int key) {
     int sum = 0;
     while (key != 0) {
-        sum += key % 10; // Add last digit
-        key /= 10;       // Remove last digit
+        sum += key % 10; 
+        key /= 10;       
     }
     return sum % TABLE_SIZE;
 }
@@ -21,7 +21,7 @@ void insert(int key) {
     int index = simpleAdditiveHash(key);
     int originalIndex = index;
     while (hashTable[index] != -1) {
-        index = (index + 1) % TABLE_SIZE; // Linear probing
+        index = (index + 1) % TABLE_SIZE; 
         if (index == originalIndex) {
             printf("Hash table is full, cannot insert %d\n", key);
             return;
