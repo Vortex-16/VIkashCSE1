@@ -1,5 +1,5 @@
 // Size of Hash Table 20
-// put them in hash table using folding method
+// put them in hash table using folding method/(using any hash function)
 //if collison occcers then use linear probing
 #include <stdio.h>
 #include <stdlib.h>
