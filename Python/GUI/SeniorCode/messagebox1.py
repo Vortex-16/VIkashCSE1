@@ -5,7 +5,7 @@ Created on Wed Jun 26 12:41:14 2019
 @author: STUDENT
 """
 
-import tkinter
+import tkinter 
 from tkinter import messagebox
 
 # hide main window
@@ -15,13 +15,13 @@ root.withdraw()
 # message box display
 
 messagebox.showinfo("Information","Informative message")
-m=tk.messagebox.askquestion("Hello","Are u well?")
+m=messagebox.askquestion("Hello","Are u well?")
 if m=='yes':
   print('good')
 else :
   print('bad')
 
-m1=tk.messagebox.askyesnocancel("Hello","Are u well?")
+m1=messagebox.askyesnocancel("Hello","Are u well?")
 
 if m1=='yes':
   print('good')

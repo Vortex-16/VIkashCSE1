@@ -24,7 +24,7 @@ listbox.insert(2, "USA")
 listbox.insert(3, "Japan")  
   
 listbox.insert(4, "Austrelia")  
-value ="aaa"
+value ="Select Your Country From The List: "
 def CurSelet(evt):
     global value
     value=str((listbox.get(listbox.curselection())))
@@ -36,7 +36,7 @@ listbox.bind('<<ListboxSelect>>',CurSelet)
 def abc():
     print(value)
 
-button =tk.Button(top,text="val", fg="red", command=abc)
+button =tk.Button(top,text="add", fg="blue", command=abc)
 lbl.pack() 
 listbox.pack()    
  
