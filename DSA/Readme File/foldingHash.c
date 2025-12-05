@@ -63,6 +63,24 @@ int main() {
 ```
 This program initializes a hash table, defines a folding hash function, and provides functions to insert keys
 and display the hash table. The `foldingHash` function processes the key by splitting it into parts of two digits, summing them, and then taking the modulo with the table size to get the hash index. Linear probing is used to handle collisions when inserting keys into the hash table.
+### Pseduo Code:
+1. Initialize a hash table of a fixed size with all slots set to -1 (indicating empty).     
+2. Define a function `foldingHash(key)`:
+   - Convert the key to a string.
+   - Split the string into parts of two digits.
+   - Sum these parts.
+   - Return the sum modulo the table size.
+3. Define a function `insert(key)`:
+    - Compute the hash index using `foldingHash(key)`.
+    - If the slot at the computed index is occupied, use linear probing to find the next available slot.
+    - Insert the key into the found slot.
+4. Define a function `displayTable()` to print the contents of the hash table.
+5. In the `main()` function:
+   - Initialize the hash table.
+   - Define an array of keys to be inserted.
+   - Loop through the array and insert each key into the hash table.
+   - Display the contents of the hash table.
+
 ### Output:
 When you run the program, it will display the contents of the hash table after inserting the specified keys. The output will look something like this:
 ```
