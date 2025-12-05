@@ -31,3 +31,14 @@ int main() {
     dfs(0);
     return 0;
 }
+/*
+Output:
+Enter number of vertices: 5
+Enter number of edges: 4
+Enter edge (u v): 0 1
+Enter edge (u v): 0 2
+Enter edge (u v): 1 3
+Enter edge (u v): 1 4
+DFS Traversal starting from vertex 0:
+0 1 3 4 2
+*/
