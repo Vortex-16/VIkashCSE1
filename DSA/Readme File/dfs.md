@@ -1,5 +1,5 @@
 # Depth First Search
-
+Depth First Search (DFS) is a fundamental algorithm used for traversing or searching tree or graph data structures. The algorithm starts at a selected node (often referred to as the 'root' in trees) and explores as far as possible along each branch before backtracking.
 
 ## CODE:
 
@@ -36,6 +36,26 @@ int main() {
     return 0;
 }
 ---
+
+### Pseudo Code:
+```
+DFS(graph, start_vertex):
+    Create a stack S
+    Create a set visited
+    Push start_vertex onto S
+    While S is not empty:
+        vertex = Pop from S
+        If vertex is not in visited:
+            Add vertex to visited
+            Print vertex
+            For each neighbor of vertex in graph:
+                If neighbor is not in visited:
+                    Push neighbor onto S
+```
+---
+
+
+
 
 ### Output:
 Enter number of vertices: 5
